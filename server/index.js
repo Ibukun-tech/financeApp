@@ -36,10 +36,6 @@ mongoose
     // // await KpiModel.insertMany(kpis);
     // ProductModel.insertMany(products);
     // console.log("sent to the daatabase");
-    await TransactionModel.deleteMany();
-    await TransactionModel.insertMany(transactions);
-    // console.log(await TransactionModel.find());
-    console.log("sent to the daatabase");
   })
   .catch((err) => {
     console.log("error somewhere", err);
