@@ -10,7 +10,7 @@ import {
 } from "../../state/api";
 import { Box, useTheme, Typography } from "@mui/material";
 import BoxHeader from "../../components/Boxheader";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 interface Props {}
 
 const Row3 = (props: Props) => {
@@ -48,7 +48,10 @@ const Row3 = (props: Props) => {
       field: "expense",
       headerName: "Expense",
       flex: 0.5,
-      renderCell: (params: GridCellParams) => `$${params.value}`,
+      renderCell: (params: GridCellParams) => {
+        console.log(params);
+        return `$${params.value}`;
+      },
     },
 
     {
